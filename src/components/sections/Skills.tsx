@@ -1,26 +1,28 @@
 'use client';
 import { motion, Variants } from 'framer-motion';
+// A LINHA QUE FALTAVA: Importando os componentes do Tooltip
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } },
 };
 
+// Estrutura de dados com nome e descrição para cada habilidade
 const skills = [
-    { name: "Python", description: "Mais de 3 anos de experiência em backend e análise de dados." },
-    { name: "XGBoost", description: "Criação e otimização de modelos de classificação e regressão." },
-    { name: "Next.js", description: "Construção de aplicações web full-stack reativas e performáticas." },
-    { name: "Flask", description: "Desenvolvimento de APIs e servidores web." },
-    { name: "Pandas", description: "Manipulação e análise de dados em Python." },
-    { name: "SQLAlchemy", description: "Interação com bancos de dados relacionais." },
-    { name: "Scikit-learn", description: "Machine learning em Python." },
-    { name: "JavaScript", description: "Desenvolvimento de interfaces web interativas." },
-    { name: "React", description: "Construção de interfaces de usuário reativas." },
-    { name: "Tailwind CSS", description: "Estilização de interfaces web." },
-    { name: "TypeScript", description: "Tipagem de código." },
-    { name: "Git", description: "Controle de versões." },
-    { name: "GitHub", description: "Gerenciamento de repositório." },];
-
+  { name: "Python", description: "Backend, automação e análise de dados" },
+  { name: "Flask", description: "Criação de APIs RESTful e aplicações web" },
+  { name: "XGBoost", description: "Modelos de classificação e regressão de alta performance" },
+  { name: "Pandas", description: "Manipulação e análise de grandes volumes de dados" },
+  { name: "SQLAlchemy", description: "Mapeamento objeto-relacional (ORM) para bancos de dados" },
+  { name: "Scikit-learn", description: "Biblioteca essencial para Machine Learning em Python" },
+  { name: "JavaScript", description: "Interatividade e dinamismo para o front-end" },
+  { name: "React", description: "Construção de interfaces de usuário reativas e componentizadas" },
+  { name: "Next.js", description: "Framework React para produção com renderização no servidor e mais" },
+  { name: "Tailwind CSS", description: "Framework CSS utility-first para designs rápidos e customizados" },
+  { name: "TypeScript", description: "JavaScript com tipagem estática para maior robustez" },
+  { name: "Git", description: "Sistema de controle de versão para gerenciamento de código" },
+];
 
 export function SkillsSection() {
   return (
