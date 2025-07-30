@@ -17,7 +17,9 @@ const projects = [
     longDescription: "Este projeto nasceu da minha fascinação por estatística e machine learning. O sistema processa um histórico de resultados, identifica dezenas de padrões heurísticos e utiliza um modelo XGBoost para prever as próximas jogadas. A arquitetura foi projetada para ser modular, eficiente e escalável, com um back-end em Flask e um front-end reativo.",
     tags: ["Python", "Flask", "XGBoost", "Pandas", "SQLAlchemy"],
     githubUrl: "https://github.com/JhonyJPHR/AnaliseQuanty",
-    liveUrl: null
+    liveUrl: null,
+    learnings: "O maior desafio foi otimizar as dezenas de análises heurísticas para rodarem em tempo real sem comprometer a performance. Aprendi a importância de caching e consultas eficientes ao banco de dados, além de aprofundar meus conhecimentos em feature engineering para o modelo XGBoost."
+
   },
   // ADICIONE SEU PRÓXIMO PROJETO AQUI
   // {
@@ -36,13 +38,19 @@ export function ProjectsSection() {
       <h2 className="text-3xl font-bold text-center mb-10">Projetos</h2>
       <div className="grid gap-8 md:grid-cols-1">
         {projects.map(project => (
-          <Card key={project.title} className="bg-gray-900/50 border-cyan-500/20 shadow-lg shadow-cyan-500/5">
+        <motion.div whileHover={{ scale: 1.02 }} transition={{ type: 'spring', stiffness: 300 }}>
+          <Card key={project.title} className="bg-gray-900/50 border-cyan-500/20 shadow-lg shadow-cyan-500/5 h-full">
             <CardHeader>
               <CardTitle className="text-2xl text-cyan-400">{project.title}</CardTitle>
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
             <CardContent>
               <p className="mb-6 text-neutral-300">{project.longDescription}</p>
+              {/* Nova Seção de Aprendizados */}
+                <div className="mb-6">
+                    <h4 className="font-semibold text-cyan-400 mb-2">Desafios e Aprendizados</h4>
+                    <p className="text-neutral-400 text-sm">{project.learnings}</p>
+                </div>
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map(tag => (
                   <span key={tag} className="px-3 py-1 text-xs font-medium bg-cyan-900/50 text-cyan-300 rounded-full">{tag}</span>
