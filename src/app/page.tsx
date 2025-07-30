@@ -1,12 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
+// STEP 1: Import 'Variants' from framer-motion
+import { motion, Variants } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 export default function PortfolioPage() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,7 +17,8 @@ export default function PortfolioPage() {
     },
   };
 
-  const itemVariants = {
+  // STEP 2: Add the explicit 'Variants' type to the constant
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -72,13 +74,13 @@ export default function PortfolioPage() {
               transition={{ delay: 1, duration: 0.5 }}
             >
               <Button variant="outline" size="icon" asChild>
-                <a href="https://github.com/JhonyJPHR" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github /></a>
+                <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github /></a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="https://www.linkedin.com/in/jhony-wesley-02b6a8288/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin /></a>
+                <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin /></a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="mailto:wesleyjhony933@gmail.com" aria-label="Email"><Mail /></a>
+                <a href="mailto:seu-email@exemplo.com" aria-label="Email"><Mail /></a>
               </Button>
             </motion.div>
           </motion.section>
@@ -104,7 +106,7 @@ export default function PortfolioPage() {
                 </div>
                 <div className="flex gap-4">
                   <Button asChild>
-                    <a href="https://github.com/JhonyJPHR/AnaliseQuanty" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" rel="noopener noreferrer">
                       Ver Código no GitHub <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
