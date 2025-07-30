@@ -49,7 +49,7 @@ export default function PortfolioPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Wesley da Silva
+              Jhony Wesley Laurindo
             </motion.h1>
             <motion.p 
               className="mt-4 text-xl text-neutral-300"
@@ -74,13 +74,13 @@ export default function PortfolioPage() {
               transition={{ delay: 1, duration: 0.5 }}
             >
               <Button variant="outline" size="icon" asChild>
-                <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github /></a>
+                <a href="https://github.com/JhonyJPHR" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github /></a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin /></a>
+                <a href="https://www.linkedin.com/in/jhony-wesley-02b6a8288/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin /></a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="mailto:seu-email@exemplo.com" aria-label="Email"><Mail /></a>
+                <a href="wesleyjhony933@gmail.com" aria-label="Email"><Mail /></a>
               </Button>
             </motion.div>
           </motion.section>
@@ -106,7 +106,7 @@ export default function PortfolioPage() {
                 </div>
                 <div className="flex gap-4">
                   <Button asChild>
-                    <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/JhonyJPHR/AnaliseQuanty" target="_blank" rel="noopener noreferrer">
                       Ver Código no GitHub <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
